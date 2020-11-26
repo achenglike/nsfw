@@ -44,6 +44,7 @@ if __name__ == '__main__':
     args = sys.argv
     if len(args) < 2:
         print("usage: python serving_client.py <image_path>")
+    image_path = args[1]
     image_data = load_image(image_path)
     predict = nsfw_predict(image_data)
     print(predict)
