@@ -51,6 +51,11 @@ the model code copy from [Tensorflow offical model](https://github.com/tensorflo
 you can find the detail at repo [nsfw_data_scrapper](https://github.com/alexkimxyz/nsfw_data_scrapper)
 
 
+## docker
+1. docker pull tensorflow/serving
+2. git clone this repo
+3. docker run -p 8501:8501 --mount type=bind,source=/root/nsfw/data/models,target=/models/nsfw -e MODEL_NAME=nsfw -t tensorflow/serving &
 
+4. python serving_client.py /tmp/test/test.jpeg   warn:change url in serving_client.py
 
  
